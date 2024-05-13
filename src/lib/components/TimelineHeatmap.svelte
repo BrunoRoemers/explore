@@ -174,7 +174,7 @@
 					: 'text-bbw-navy text-lg'}"
 				style="width: {1 / (days.length / 100)}%;"
 			>
-				<a href="/24/day/{format(new Date(day), 'yyyy-MM-dd', { timeZone: config.tz })}"
+				<a href="{prefix}/day/{format(new Date(day), 'yyyy-MM-dd', { timeZone: config.tz })}"
 					><span class="hidden md:inline-block">{format(new Date(day), 'eee ', { timeZone: config.tz })}</span>
 					{format(new Date(day), 'd', { timeZone: config.tz })}</a
 				>
