@@ -7,6 +7,7 @@
 
 	export let data;
 	export let highlightDay = false;
+	export let prefix = '';
 
 	const startDate = '2024-05-18';
 	const endDate = '2024-05-27';
@@ -117,7 +118,7 @@
 	function makeClick(day, segment, keys) {
 		const start = new Date(`${day}T${segment}`);
 		const end = addMinutes(start, segmentMinutes);
-		goto(`/${data.params.entry}/day/${day}?start=${start.toISOString()}&end=${end.toISOString()}`);
+		goto(`${prefix}/day/${day}?start=${start.toISOString()}&end=${end.toISOString()}`);
 	}
 
 	function hiddenSelected() {

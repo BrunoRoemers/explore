@@ -11,6 +11,7 @@
 	import { config } from '$lib/bbw';
 
 	export let data;
+	export let prefix = '';
 
 	function makeSegments(events, date) {
 		const query = {
@@ -58,7 +59,7 @@
 
 <svelte:head>
 	<title
-		>{formatInTimeZone(new Date($page.params.date), config.tz, 'EEEE MMMM d, yyyy')} | Berlin Blockchain Week 20{$page.params.entry}</title
+		>{formatInTimeZone(new Date($page.params.date), config.tz, 'EEEE MMMM d, yyyy')} | Berlin Blockchain Week 2024</title
 	>
 </svelte:head>
 
@@ -74,7 +75,7 @@
 				<CalendarList
 					date={$page.params.date}
 					{segments}
-					entry={$page.params.entry}
+					prefix={prefix}
 					bundle={data.bundle}
 				/>
 			</div>
@@ -88,7 +89,7 @@
 						date={$page.params.date}
 						col="other-event"
 						segments={relatedEvents}
-						entry={$page.params.entry}
+						prefix={prefix}
 						bundle={data.bundle}
 					/>
 				</div>

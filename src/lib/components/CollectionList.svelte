@@ -4,7 +4,7 @@
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 
 	export let arr;
-	export let entry = '24';
+	export let prefix = '';
 	export let col = 'speaker';
 	export let img = 'photoUrl';
 	export let aspect = 'aspect-square';
@@ -32,7 +32,7 @@
 		return it;
 	}
 
-	const _url = (col, item) => (item.hidden ? '' : `/${entry}/${col}/${item.id}`);
+	const _url = (col, item) => (item.hidden ? '' : `${prefix}/${col}/${item.id}`);
 </script>
 
 {#each arr.map((k) => findObject(k)) as item}

@@ -3,6 +3,7 @@
 
 	export let path;
 	export let type;
+	export const prefix = '';
 </script>
 
 <div class="w-full dark:text-gray-400 bg-bbw-navy">
@@ -10,8 +11,8 @@
 		<div class="mx-4 xl:mx-0">
 			<div class="flex gap-8 pb-6">
 				<h1 class="text-4xl md:text-5xl font-bold text-bbw-white">
-					<a href="/{$page.params.entry}">#BBW24</a><a
-						href="/{$page.params.entry}{path ? '/' + path : ''}"
+					<a href="{prefix}/">#BBW24</a><a
+						href="{prefix}{path ? '/' + path : ''}"
 						><span class="text-bbw-yellow">.{type}</span></a
 					>
 				</h1>

@@ -11,6 +11,7 @@
 	import { formatInTimeZone } from 'date-fns-tz';
 
 	export let data;
+	export let prefix = '';
 
 	function makeDaysSegments(events) {
 		const days = [];
@@ -53,7 +54,7 @@
 </script>
 
 <svelte:head>
-	<title>Schedule | Berlin Blockchain Week 20{$page.params.entry}</title>
+	<title>Schedule | Berlin Blockchain Week 2024</title>
 </svelte:head>
 
 <Header path={false} type="schedule" />
@@ -65,7 +66,7 @@
 			{#each days as day}
 				<div class="mb-14">
 					<h2 class="text-3xl md:text-3xl">
-						<a href="/{$page.params.entry}/day/{day.date}" class=" text-bbw-navy hover:underline"
+						<a href="{prefix}/day/{day.date}" class=" text-bbw-navy hover:underline"
 							>{formatInTimeZone(new Date(day.date), config.tz, 'MMMM d, yyyy')}</a
 						>
 						<span class="bbw-text-color-primary">- {formatInTimeZone(new Date(day.date), config.tz, 'EEEE')}</span>
@@ -74,7 +75,7 @@
 						<CalendarList
 							date={$page.params.date}
 							segments={day.segments}
-							entry={$page.params.entry}
+							prefix={prefix}
 							bundle={data.bundle}
 						/>
 					</div>

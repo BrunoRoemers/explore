@@ -8,7 +8,7 @@
 	export let segments;
 	export let date;
 	export let col = 'event';
-	export let entry;
+	export let prefix = '';
 	export let bundle;
 	export let event = null;
 
@@ -53,7 +53,7 @@
 			</div>
 			<div class="md:flex gap-2 items-center mb-6 md:mb-0">
 				<div class="flex gap-2 items-center my-2 md:my-0">
-					<a href="/{entry}/{col}/{(segment.event || event).id}">
+					<a href="{prefix}/{col}/{(segment.event || event).id}">
 						<ItemLogo item={segment.event || event} width={event ? 'w-8' : 'w-10'} />
 					</a>
 					<div>
@@ -64,7 +64,7 @@
 								]}*
 							{:else}
 								<a
-									href="/{entry}/{col}/{(segment.event || event).id}"
+									href="{prefix}/{col}/{(segment.event || event).id}"
 									class="text-bbw-navy hover:underline"
 									>{(segment.event || event)[
 										(segment.event || event).shortname ? 'shortname' : 'name'
@@ -92,7 +92,7 @@
 							📍 {@html (segment.venues || event.venues)
 								.map((vId) => {
 									const place = bundle.places.find((p) => p.id === vId);
-									return `<a href="/${entry}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`;
+									return `<a href="${prefix}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`;
 								})
 								.join('<span>, </span>')}
 						{:else if segment.event?.venueName || event?.venueName}

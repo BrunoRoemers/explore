@@ -11,7 +11,8 @@
 	$: homepage =
 		!$page.params.type &&
 		!$page.params.date &&
-		!['/[entry]/schedule', '/[entry]/for-speakers', '/[entry]/for-sponsors'].includes(
+		// TODO
+		!['/schedule', '/for-speakers', '/for-sponsors'].includes(
 			$page.route.id
 		);
 </script>

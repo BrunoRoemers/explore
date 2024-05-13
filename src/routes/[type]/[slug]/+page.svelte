@@ -61,7 +61,7 @@
 		return it;
 	}
 
-	$: entry = $page.params.entry;
+	$: prefix = '';
 	$: col = $page.params.type;
 	$: colPlural = colsDef[col];
 	$: item = enrichItem(data.bundle[colPlural].find((e) => e.id === $page.params.slug));
@@ -72,7 +72,7 @@
 			.map((vId) => {
 				const place = data.bundle.places.find((p) => p.id === vId);
 				return rich
-					? `<a href="/${$page.params.entry}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`
+					? `<a href="${prefix}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`
 					: place.name;
 			})
 			.join(', ');
@@ -88,7 +88,7 @@
 </script>
 
 <svelte:head>
-	<title>{item.name} | Berlin Blockchain Week 20{$page.params.entry}</title>
+	<title>{item.name} | Berlin Blockchain Week 2024</title>
 	<meta name="description" content={itemDescription} />
 	<meta name="keywords" content={item.tags ? item.tags.join(', ') : ''} />
 
@@ -107,7 +107,7 @@
 			content="@{item.links.twitter.replace(/https?:\/\/(twitter\.com\/)/g, '')}"
 		/>
 	{/if}
-	<meta name="twitter:title" content="{item.name} | #BBW{$page.params.entry}" />
+	<meta name="twitter:title" content="{item.name} | #BBW24" />
 	<meta name="twitter:description" content={itemDescription} />
 	<meta name="twitter:image" content={itemImage} />
 </svelte:head>
@@ -193,7 +193,7 @@
 											<div class="flex items-center">
 												{#if chain.id}
 													<a
-														href="/{entry}/chain/{chain.id}"
+														href="{prefix}/chain/{chain.id}"
 														class="flex items-center underline hover:no-underline"
 													>
 														{#if chain.logo}
@@ -380,7 +380,7 @@
 					{#each eventDates(item) as date}
 						<div class="mb-6">
 							<h3 class="mt-4 text-xl uppercase text-gray-500 dark:text-gray-400">
-								<a href="/{entry}/day/{date}">{formatInTimeZone(new Date(date), config.tz, 'EEEE - MMMM d, yyyy')}</a>
+								<a href="{prefix}/day/{date}">{formatInTimeZone(new Date(date), config.tz, 'EEEE - MMMM d, yyyy')}</a>
 							</h3>
 							<div class="mt-4">
 								<CalendarList
@@ -390,7 +390,7 @@
 											s.remote ||
 											formatInTimeZone(new Date(s.startTime), config.tz, 'yyyy-MM-dd') === date
 									)}
-									{entry}
+									prefix={prefix}
 									bundle={data.bundle}
 									event={item}
 								/>
@@ -439,7 +439,7 @@
 				{/if}
 				{#if item.cfp}
 					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
-						<a href="/{entry}/for-speakers">For speakers</a>
+						<a href="{prefix}/for-speakers">For speakers</a>
 					</h2>
 					<div class="mt-4 text-xl">
 						This event is looking for speakers.{item.cfp.text ? ' ' + item.cfp.text : ''}
@@ -453,7 +453,7 @@
 				{/if}
 				{#if item.sponsors}
 					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
-						<a href="/{entry}/for-sponsors">For sponsors</a>
+						<a href="{prefix}/for-sponsors">For sponsors</a>
 					</h2>
 					<div class="mt-4 text-xl">
 						This event is looking for sponsors{item.sponsors.range
