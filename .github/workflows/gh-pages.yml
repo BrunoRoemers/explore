@@ -15,6 +15,8 @@ jobs:
       contents: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+    env:
+      PUBLIC_URL_PREFIX: ${{ secrets.PUBLIC_URL_PREFIX }}
     steps:
       - uses: actions/checkout@v4
         with:
