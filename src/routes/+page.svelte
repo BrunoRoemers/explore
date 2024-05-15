@@ -5,9 +5,10 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import { page } from '$app/stores';
 	import { processItemsList } from '$lib/utils.js';
+	import { PUBLIC_URL_PREFIX } from '$env/static/public';
 
 	export let data;
-	$: prefix = '';
+	$: prefix = PUBLIC_URL_PREFIX;
 	$: conferences = data.bundle.events.filter((e) => {
 		return e.types.find((t) => ['conference', 'hackathon'].includes(t)) && !e.hidden;
 	});

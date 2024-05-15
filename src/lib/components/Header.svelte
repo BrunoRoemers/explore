@@ -1,9 +1,10 @@
 <script>
 	import { page } from '$app/stores';
+	import { PUBLIC_URL_PREFIX } from '$env/static/public';
 
 	export let path;
 	export let type;
-	export const prefix = '';
+	export const prefix = PUBLIC_URL_PREFIX;
 </script>
 
 <div class="w-full dark:text-gray-400 bg-bbw-navy">

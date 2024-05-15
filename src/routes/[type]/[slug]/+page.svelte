@@ -12,6 +12,7 @@
 	import { config } from '$lib/bbw';
 	import { format } from 'date-fns';
 	import { formatInTimeZone } from 'date-fns-tz';
+	import { PUBLIC_URL_PREFIX } from '$env/static/public';
 
 	const colsDef = Object.fromEntries(
 		Object.keys(config.collections).map((col) => {
@@ -61,7 +62,7 @@
 		return it;
 	}
 
-	$: prefix = '';
+	$: prefix = PUBLIC_URL_PREFIX;
 	$: col = $page.params.type;
 	$: colPlural = colsDef[col];
 	$: item = enrichItem(data.bundle[colPlural].find((e) => e.id === $page.params.slug));

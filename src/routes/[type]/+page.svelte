@@ -10,12 +10,13 @@
 	import { formatItemDate, getFlagEmoji, processItemsList } from '$lib/utils.js';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';
+	import { PUBLIC_URL_PREFIX } from '$env/static/public';
 
 	import { compareAsc } from 'date-fns';
 
 	export let data;
 
-	let prefix = '';
+	let prefix = PUBLIC_URL_PREFIX;
 	let q = '';
 
 	let total = 0;

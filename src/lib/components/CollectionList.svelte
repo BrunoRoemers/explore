@@ -2,9 +2,10 @@
 	import SvelteMarkdown from 'svelte-markdown';
 	import { formatItemDate } from '$lib/utils.js';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
+	import { PUBLIC_URL_PREFIX } from '$env/static/public';
 
 	export let arr;
-	export let prefix = '';
+	export let prefix = PUBLIC_URL_PREFIX;
 	export let col = 'speaker';
 	export let img = 'photoUrl';
 	export let aspect = 'aspect-square';

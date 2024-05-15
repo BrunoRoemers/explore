@@ -5,13 +5,14 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';
+	import { PUBLIC_URL_PREFIX } from '$env/static/public';
 
 	import { format, compareAsc } from 'date-fns';
 	import { formatInTimeZone } from 'date-fns-tz';
 	import { config } from '$lib/bbw';
 
 	export let data;
-	export let prefix = '';
+	export let prefix = PUBLIC_URL_PREFIX;
 
 	function makeSegments(events, date) {
 		const query = {

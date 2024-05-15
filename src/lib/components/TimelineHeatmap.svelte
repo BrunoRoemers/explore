@@ -4,10 +4,11 @@
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import { format } from 'date-fns-tz';
 	import { config } from '$lib/bbw';
+	import { PUBLIC_URL_PREFIX } from '$env/static/public';
 
 	export let data;
 	export let highlightDay = false;
-	export let prefix = '';
+	export let prefix = PUBLIC_URL_PREFIX;
 
 	const startDate = '2024-05-18';
 	const endDate = '2024-05-27';

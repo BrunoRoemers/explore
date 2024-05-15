@@ -4,11 +4,12 @@
 	import { config } from '$lib/bbw';
 	import { format } from 'date-fns';
 	import { formatInTimeZone } from 'date-fns-tz';
+	import { PUBLIC_URL_PREFIX } from '$env/static/public';
 
 	export let segments;
 	export let date;
 	export let col = 'event';
-	export let prefix = '';
+	export let prefix = PUBLIC_URL_PREFIX;
 	export let bundle;
 	export let event = null;
 
