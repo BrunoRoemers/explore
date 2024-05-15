@@ -3,6 +3,9 @@
 	import '../app.css';
 	import DarkModeToggle from '$lib/components/DarkModeToggle.svelte';
 	import { SOffline } from 's-offline';
+	import { PUBLIC_URL_PREFIX } from '$env/static/public';
+
+	const prefix = PUBLIC_URL_PREFIX;
 
 	const handleNetworkChange = (status) => {
 		console.log('event details: ', status);
@@ -50,7 +53,7 @@
 		<div class="px-6 xl:px-0">
 			<div class="max-w-7xl mx-auto pt-10 pb-6">
 				<h1 class="text-4xl font-bold text-bbw-white">
-					<a href="/">Berlin Blockchain Week 2024</a>
+					<a href="{prefix}/">Berlin Blockchain Week 2024</a>
 				</h1>
 				<div class="text-2xl text-bbw-yellow">May 18-27, 2024</div>
 			</div>
