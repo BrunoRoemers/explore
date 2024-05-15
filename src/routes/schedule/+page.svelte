@@ -6,13 +6,12 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import { config } from '$lib/bbw';
-	import { PUBLIC_URL_PREFIX } from '$env/static/public';
+	import { base } from "$app/paths"
 
 	import { format, compareAsc, addDays } from 'date-fns';
 	import { formatInTimeZone } from 'date-fns-tz';
 
 	export let data;
-	export let prefix = PUBLIC_URL_PREFIX;
 
 	function makeDaysSegments(events) {
 		const days = [];
@@ -67,7 +66,7 @@
 			{#each days as day}
 				<div class="mb-14">
 					<h2 class="text-3xl md:text-3xl">
-						<a href="{prefix}/day/{day.date}" class=" text-bbw-navy hover:underline"
+						<a href="{base}/day/{day.date}" class=" text-bbw-navy hover:underline"
 							>{formatInTimeZone(new Date(day.date), config.tz, 'MMMM d, yyyy')}</a
 						>
 						<span class="bbw-text-color-primary">- {formatInTimeZone(new Date(day.date), config.tz, 'EEEE')}</span>
@@ -76,7 +75,6 @@
 						<CalendarList
 							date={$page.params.date}
 							segments={day.segments}
-							prefix={prefix}
 							bundle={data.bundle}
 						/>
 					</div>

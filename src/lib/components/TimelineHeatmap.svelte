@@ -4,11 +4,10 @@
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import { format } from 'date-fns-tz';
 	import { config } from '$lib/bbw';
-	import { PUBLIC_URL_PREFIX } from '$env/static/public';
+	import { base } from "$app/paths"
 
 	export let data;
 	export let highlightDay = false;
-	export let prefix = PUBLIC_URL_PREFIX;
 
 	const startDate = '2024-05-18';
 	const endDate = '2024-05-27';
@@ -119,7 +118,7 @@
 	function makeClick(day, segment, keys) {
 		const start = new Date(`${day}T${segment}`);
 		const end = addMinutes(start, segmentMinutes);
-		goto(`${prefix}/day/${day}?start=${start.toISOString()}&end=${end.toISOString()}`);
+		goto(`${base}/day/${day}?start=${start.toISOString()}&end=${end.toISOString()}`);
 	}
 
 	function hiddenSelected() {
@@ -175,7 +174,7 @@
 					: 'text-bbw-navy text-lg'}"
 				style="width: {1 / (days.length / 100)}%;"
 			>
-				<a href="{prefix}/day/{format(new Date(day), 'yyyy-MM-dd', { timeZone: config.tz })}"
+				<a href="{base}/day/{format(new Date(day), 'yyyy-MM-dd', { timeZone: config.tz })}"
 					><span class="hidden md:inline-block">{format(new Date(day), 'eee ', { timeZone: config.tz })}</span>
 					{format(new Date(day), 'd', { timeZone: config.tz })}</a
 				>

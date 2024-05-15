@@ -10,13 +10,12 @@
 	import { formatItemDate, getFlagEmoji, processItemsList } from '$lib/utils.js';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';
-	import { PUBLIC_URL_PREFIX } from '$env/static/public';
+	import { base } from "$app/paths"
 
 	import { compareAsc } from 'date-fns';
 
 	export let data;
 
-	let prefix = PUBLIC_URL_PREFIX;
 	let q = '';
 
 	let total = 0;
@@ -104,7 +103,7 @@
 				(k) => config.collections[k].model === $page.params.type
 			);
 			if (ftype) {
-				goto(`${prefix}/${ftype}`);
+				goto(`${base}/${ftype}`);
 			}
 		}
 	});
@@ -176,7 +175,7 @@
 											>{formatItemDate(item)}</td
 										>
 										<td class="w-12 md:w-14">
-											<a href="{prefix}/{tc.model}/{item.id}">
+											<a href="{base}/{tc.model}/{item.id}">
 												<ItemLogo {item} />
 											</a>
 										</td>
@@ -186,7 +185,7 @@
 													{item.name}*
 												{:else}
 													<a
-														href="{prefix}/{tc.model}/{item.id}"
+														href="{base}/{tc.model}/{item.id}"
 														class="text-bbw-navy hover:underline">{item.name}</a
 													>
 												{/if}
@@ -202,7 +201,7 @@
 												{@html item.venues
 													.map((vId) => {
 														const place = data.bundle.places.find((p) => p.id === vId);
-														return `<a href="${prefix}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`;
+														return `<a href="${base}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`;
 													})
 													.join(', ')}
 											{:else if item.venueName}
@@ -231,12 +230,12 @@
 									{/if}
 									{#if type === 'speakers'}
 										<td class="w-12 md:w-14">
-											<a href="{prefix}/{tc.model}/{item.id}">
+											<a href="{base}/{tc.model}/{item.id}">
 												<ItemLogo {item} img="photoUrl" rounded="rounded-full" />
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{prefix}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
 												>{item.name}</a
 											>
 										</td>
@@ -259,12 +258,12 @@
 									{/if}
 									{#if type === 'media-partners'}
 										<td class="w-20">
-											<a href="{prefix}/{tc.model}/{item.id}">
+											<a href="{base}/{tc.model}/{item.id}">
 												<ItemLogo {item} width="w-16" aspect="aspect-[16/9]" />
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{prefix}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
 												>{item.name}</a
 											>
 										</td>
@@ -283,12 +282,12 @@
 									{/if}
 									{#if type === 'benefits'}
 										<td class="w-20">
-											<a href="{prefix}/{tc.model}/{item.id}">
+											<a href="{base}/{tc.model}/{item.id}">
 												<ItemLogo {item} width="w-16" aspect="aspect-[16/9]" />
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{prefix}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
 												>{item.name}</a
 											>
 										</td>
@@ -296,12 +295,12 @@
 									{/if}
 									{#if type === 'places'}
 										<td class="w-14">
-											<a href="{prefix}/{tc.model}/{item.id}">
+											<a href="{base}/{tc.model}/{item.id}">
 												<ItemLogo {item} img="photo" />
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{prefix}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
 												>{item.name}</a
 											>
 										</td>

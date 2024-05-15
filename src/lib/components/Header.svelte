@@ -1,10 +1,9 @@
 <script>
 	import { page } from '$app/stores';
-	import { PUBLIC_URL_PREFIX } from '$env/static/public';
+	import { base } from "$app/paths"
 
 	export let path;
 	export let type;
-	export const prefix = PUBLIC_URL_PREFIX;
 </script>
 
 <div class="w-full dark:text-gray-400 bg-bbw-navy">
@@ -12,8 +11,8 @@
 		<div class="mx-4 xl:mx-0">
 			<div class="flex gap-8 pb-6">
 				<h1 class="text-4xl md:text-5xl font-bold text-bbw-white">
-					<a href="{prefix}/">#BBW24</a><a
-						href="{prefix}{path ? '/' + path : ''}"
+					<a href="{base}/">#BBW24</a><a
+						href="{base}{path ? '/' + path : ''}"
 						><span class="text-bbw-yellow">.{type}</span></a
 					>
 				</h1>

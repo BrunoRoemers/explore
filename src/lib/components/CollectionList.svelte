@@ -2,10 +2,9 @@
 	import SvelteMarkdown from 'svelte-markdown';
 	import { formatItemDate } from '$lib/utils.js';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
-	import { PUBLIC_URL_PREFIX } from '$env/static/public';
+	import { base } from "$app/paths"
 
 	export let arr;
-	export let prefix = PUBLIC_URL_PREFIX;
 	export let col = 'speaker';
 	export let img = 'photoUrl';
 	export let aspect = 'aspect-square';
@@ -33,7 +32,7 @@
 		return it;
 	}
 
-	const _url = (col, item) => (item.hidden ? '' : `${prefix}/${col}/${item.id}`);
+	const _url = (col, item) => (item.hidden ? '' : `${base}/${col}/${item.id}`);
 </script>
 
 {#each arr.map((k) => findObject(k)) as item}

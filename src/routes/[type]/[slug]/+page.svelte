@@ -12,7 +12,7 @@
 	import { config } from '$lib/bbw';
 	import { format } from 'date-fns';
 	import { formatInTimeZone } from 'date-fns-tz';
-	import { PUBLIC_URL_PREFIX } from '$env/static/public';
+	import { base } from "$app/paths"
 
 	const colsDef = Object.fromEntries(
 		Object.keys(config.collections).map((col) => {
@@ -62,7 +62,6 @@
 		return it;
 	}
 
-	$: prefix = PUBLIC_URL_PREFIX;
 	$: col = $page.params.type;
 	$: colPlural = colsDef[col];
 	$: item = enrichItem(data.bundle[colPlural].find((e) => e.id === $page.params.slug));
@@ -73,7 +72,7 @@
 			.map((vId) => {
 				const place = data.bundle.places.find((p) => p.id === vId);
 				return rich
-					? `<a href="${prefix}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`
+					? `<a href="${base}/place/${place.id}" class=\"underline hover:no-underline\">${place.name}</a>`
 					: place.name;
 			})
 			.join(', ');
@@ -194,7 +193,7 @@
 											<div class="flex items-center">
 												{#if chain.id}
 													<a
-														href="{prefix}/chain/{chain.id}"
+														href="{base}/chain/{chain.id}"
 														class="flex items-center underline hover:no-underline"
 													>
 														{#if chain.logo}
@@ -381,7 +380,7 @@
 					{#each eventDates(item) as date}
 						<div class="mb-6">
 							<h3 class="mt-4 text-xl uppercase text-gray-500 dark:text-gray-400">
-								<a href="{prefix}/day/{date}">{formatInTimeZone(new Date(date), config.tz, 'EEEE - MMMM d, yyyy')}</a>
+								<a href="{base}/day/{date}">{formatInTimeZone(new Date(date), config.tz, 'EEEE - MMMM d, yyyy')}</a>
 							</h3>
 							<div class="mt-4">
 								<CalendarList
@@ -391,7 +390,6 @@
 											s.remote ||
 											formatInTimeZone(new Date(s.startTime), config.tz, 'yyyy-MM-dd') === date
 									)}
-									prefix={prefix}
 									bundle={data.bundle}
 									event={item}
 								/>
@@ -440,7 +438,7 @@
 				{/if}
 				{#if item.cfp}
 					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
-						<a href="{prefix}/for-speakers">For speakers</a>
+						<a href="{base}/for-speakers">For speakers</a>
 					</h2>
 					<div class="mt-4 text-xl">
 						This event is looking for speakers.{item.cfp.text ? ' ' + item.cfp.text : ''}
@@ -454,7 +452,7 @@
 				{/if}
 				{#if item.sponsors}
 					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
-						<a href="{prefix}/for-sponsors">For sponsors</a>
+						<a href="{base}/for-sponsors">For sponsors</a>
 					</h2>
 					<div class="mt-4 text-xl">
 						This event is looking for sponsors{item.sponsors.range

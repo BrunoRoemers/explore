@@ -5,10 +5,9 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import { page } from '$app/stores';
 	import { processItemsList } from '$lib/utils.js';
-	import { PUBLIC_URL_PREFIX } from '$env/static/public';
+	import { base } from "$app/paths"
 
 	export let data;
-	$: prefix = PUBLIC_URL_PREFIX;
 	$: conferences = data.bundle.events.filter((e) => {
 		return e.types.find((t) => ['conference', 'hackathon'].includes(t)) && !e.hidden;
 	});
@@ -38,7 +37,7 @@
 	<div class="max-w-7xl mx-auto pt-2">
 		<div class="flex flex-wrap gap-2 my-6 text-center text-lg">
 			{#each collections as cd}
-				<a href="{prefix}/{cd.col}">
+				<a href="{base}/{cd.col}">
 					<button
 						class="border rounded border-bbw-navy hover:bg-bbw-navy hover:text-white py-2 px-2 text-bbw-navy hover:shadow-lg"
 					>
@@ -52,30 +51,30 @@
 		<TimelineHeatmap {data} />
 
 		<h2 class="text-2xl uppercase font-bold bbw-text-color-secondary">
-			<a href="{prefix}/events">Conferences and Hackathons</a> ({conferences.length})
+			<a href="{base}/events">Conferences and Hackathons</a> ({conferences.length})
 		</h2>
 		<Disclaimer />
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
-			<CollectionList arr={conferences} img="logo" col="event" prefix={prefix} offer={true} />
+			<CollectionList arr={conferences} img="logo" col="event" offer={true} />
 		</div>
 		<h2 class="text-2xl uppercase font-bold bbw-text-color-secondary">
-			<a href="{prefix}/events">Meetups, parties and other events</a> ({otherEvents.length})
+			<a href="{base}/events">Meetups, parties and other events</a> ({otherEvents.length})
 		</h2>
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
-			<CollectionList arr={otherEvents} img="logo" col="event" prefix={prefix} />
+			<CollectionList arr={otherEvents} img="logo" col="event" />
 		</div>
 
 		<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
-			<a href="{prefix}/places">Places</a> ({data.bundle.places.length})
+			<a href="{base}/places">Places</a> ({data.bundle.places.length})
 		</h2>
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 my-6 text-center text-2xl"
 		>
-			<CollectionList arr={data.bundle.places} col="place" img="photo" prefix={prefix} offer={true} />
+			<CollectionList arr={data.bundle.places} col="place" img="photo" offer={true} />
 		</div>
 	</div>
 </div>
