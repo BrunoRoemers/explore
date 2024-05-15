@@ -16,7 +16,7 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     env:
-      PUBLIC_URL_PREFIX: ${{ secrets.PUBLIC_URL_PREFIX }}
+      BASE_PATH: ${{ vars.BASE_PATH }}
     steps:
       - uses: actions/checkout@v4
         with:
