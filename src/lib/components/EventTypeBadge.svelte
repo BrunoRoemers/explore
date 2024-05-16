@@ -1,5 +1,5 @@
 <script>
-	import { config } from '$lib/bbw.js';
+	import { config } from '$lib/regen-village.js';
 	export let type = 'conference';
 </script>
 

@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { config } from '$lib/bbw';
+	import { config } from '$lib/regen-village';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import SvelteMarkdown from 'svelte-markdown';
@@ -110,7 +110,7 @@
 </script>
 
 <svelte:head>
-	<title>{tc?.title} | Berlin Blockchain Week 2024</title>
+	<title>{tc?.title} | Regen Village 2024</title>
 </svelte:head>
 
 <Header path={false} type={$page.params.type} />
@@ -119,7 +119,7 @@
 	<div class="w-full">
 		<div class="max-w-7xl mx-auto pt-5 md:pt-10">
 			<div class="mx-4 xl:mx-0">
-				<h2 class="text-2xl uppercase font-bold bbw-text-color-secondary">
+				<h2 class="text-2xl uppercase font-bold brand-text-color-secondary">
 					{tc.title} ({currentTotal}{#if currentTotal !== total}/{total}{/if})
 				</h2>
 				<div class="filter">
@@ -130,7 +130,7 @@
 						<input type="text" id="q" class="w-full" bind:value={q} />
 					</div>
 				</div>
-				<div class="text-xl mt-6 bbw-text-color-base">
+				<div class="text-xl mt-6 brand-text-color-base">
 					<table class="w-full table-auto">
 						<thead>
 							<tr class="text-left">
@@ -169,7 +169,7 @@
 						</thead>
 						<tbody>
 							{#each processedItems as item}
-								<tr class="hover:bg-bbw-yellow/20 dark:hover:bg-bbw-white/10" id={item.id}>
+								<tr class="hover:bg-brand-yellow/20 dark:hover:bg-brand-white/10" id={item.id}>
 									{#if type === 'events'}
 										<td class="text-right pr-2 md:pr-4 text-base md:text-xl"
 											>{formatItemDate(item)}</td
@@ -186,7 +186,7 @@
 												{:else}
 													<a
 														href="{base}/{tc.model}/{item.id}"
-														class="text-bbw-navy hover:underline">{item.name}</a
+														class="text-brand-navy hover:underline">{item.name}</a
 													>
 												{/if}
 											</div>
@@ -235,7 +235,7 @@
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{base}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-brand-navy hover:underline"
 												>{item.name}</a
 											>
 										</td>
@@ -263,7 +263,7 @@
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{base}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-brand-navy hover:underline"
 												>{item.name}</a
 											>
 										</td>
@@ -287,7 +287,7 @@
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{base}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-brand-navy hover:underline"
 												>{item.name}</a
 											>
 										</td>
@@ -300,7 +300,7 @@
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{base}/{tc.model}/{item.id}" class="text-bbw-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-brand-navy hover:underline"
 												>{item.name}</a
 											>
 										</td>

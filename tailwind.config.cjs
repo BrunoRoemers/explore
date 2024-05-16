@@ -10,7 +10,7 @@ module.exports = {
 				sans: ['PT Sans', ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
-				bbw: {
+				brand: {
 					navy: '#0024ff',
 					yellow: '#ffd200',
 					white: '#ffffff',

@@ -1,20 +1,14 @@
-# BBW Explore
+# Regen Village Explore
 
-This tool is a frontend for [Berlin Blockchain Week data](https://github.com/blockchainweek/data) that allows you to view the data contained in the dataset.
+This tool is a frontend for [Regen Village data](https://github.com/regenvillage/data) that allows you to view the data contained in the dataset.
 
-The production version is available at [blockchainweek.berlin](https://blockchainweek.berlin).
+The production version is available at [https://regenvillage.github.io/explore/](https://regenvillage.github.io/explore/).
 
 ## Want to add your own event?
 
 Go to the issues, hit **NEW** and choose **UPDATE/NEW EVENT**:
 
-- https://github.com/blockchainweek/data/issues/new/choose
-
-## Follow us!
-
-- Web: [blockchainweek.berlin](https://blockchainweek.berlin)
-- Twitter: [@BerBlockWeek](https://twitter.com/BerBlockWeek)
-- Matrix: [#blockchainweek:dod.ngo](https://matrix.to/#/%23blockchainweek:dod.ngo)
+- https://github.com/regenvillage/data/issues/new/choose
 
 ## Technologies used
 
@@ -25,6 +19,7 @@ Go to the issues, hit **NEW** and choose **UPDATE/NEW EVENT**:
 
 ## Authors
 
+- [Bruno Roemers](https://github.com/BrunoRoemers)
 - [tree](https://github.com/burningtree)
 - [cryptonda](https://github.com/cryptonda)
 

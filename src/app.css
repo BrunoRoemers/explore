@@ -9,13 +9,13 @@
 		@apply underline hover:no-underline hover:text-red-200;
 	}
 	#footer a {
-		@apply underline hover:no-underline hover:text-bbw-white;
+		@apply underline hover:no-underline hover:text-brand-white;
 	}
 	.separator {
 		@apply inline-block mx-3;
 	}
 	.button {
-		@apply border border-bbw-yellow py-3 px-4 rounded hover:bg-bbw-yellow hover:text-bbw-navy;
+		@apply border border-brand-yellow py-3 px-4 rounded hover:bg-brand-yellow hover:text-brand-navy;
 	}
 
 	.cc0-license {
@@ -57,24 +57,24 @@
 	}
 
 	body {
-		@apply bg-bbw-navy;
+		@apply bg-brand-navy;
 	}
 
 	.page-body {
-		@apply bg-bbw-white;
+		@apply bg-brand-white;
 	}
 
 	body.dark .page-body {
-		@apply bg-bbw-dark;
+		@apply bg-brand-dark;
 	}
 
-	.bbw-text-color-base {
+	.brand-text-color-base {
 		@apply text-gray-800 dark:text-gray-200;
 	}
-	.bbw-text-color-primary {
+	.brand-text-color-primary {
 		@apply text-gray-600 dark:text-gray-100;
 	}
-	.bbw-text-color-secondary {
+	.brand-text-color-secondary {
 		@apply text-gray-500 dark:text-gray-300;
 	}
 

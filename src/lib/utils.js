@@ -1,6 +1,6 @@
 import { format, addDays, parseISO } from 'date-fns';
 import { formatInTimeZone } from 'date-fns-tz';
-import { config } from '$lib/bbw.js';
+import { config } from '$lib/regen-village.js';
 
 const langMapper = {
 	czech: 'cz',

@@ -9,7 +9,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import SvelteMarkdown from 'svelte-markdown';
 	import { formatItemDate, bareDomain, getFlagEmoji } from '$lib/utils.js';
-	import { config } from '$lib/bbw';
+	import { config } from '$lib/regen-village';
 	import { format } from 'date-fns';
 	import { formatInTimeZone } from 'date-fns-tz';
 	import { base } from "$app/paths"
@@ -88,7 +88,7 @@
 </script>
 
 <svelte:head>
-	<title>{item.name} | Berlin Blockchain Week 2024</title>
+	<title>{item.name} | Regen Village 2024</title>
 	<meta name="description" content={itemDescription} />
 	<meta name="keywords" content={item.tags ? item.tags.join(', ') : ''} />
 
@@ -107,7 +107,7 @@
 			content="@{item.links.twitter.replace(/https?:\/\/(twitter\.com\/)/g, '')}"
 		/>
 	{/if}
-	<meta name="twitter:title" content="{item.name} | #BBW24" />
+	<meta name="twitter:title" content="{item.name} | #RegenVillage" />
 	<meta name="twitter:description" content={itemDescription} />
 	<meta name="twitter:image" content={itemImage} />
 </svelte:head>
@@ -126,7 +126,7 @@
 					rounded="rounded-xl"
 				/>
 				<div class="flex-grow">
-					<h1 class="bbw-text-color-primary text-4xl md:text-5xl font-bold mt-4 md:mt-0">
+					<h1 class="brand-text-color-primary text-4xl md:text-5xl font-bold mt-4 md:mt-0">
 						{item.name}
 					</h1>
 					{#if col === 'event' || col === 'other-event'}
@@ -306,7 +306,7 @@
 								<div class="pb-2">
 									<a href={item.registration.link} class="" target="_blank" rel="noreferrer">
 										<div
-											class="inline-block py-3 px-6 border border-bbw-navy hover:bg-bbw-navy hover:text-white text-bbw-navy text-xl rounded-lg whitespace-nowrap"
+											class="inline-block py-3 px-6 border border-brand-navy hover:bg-brand-navy hover:text-white text-brand-navy text-xl rounded-lg whitespace-nowrap"
 										>
 											{#if item.registration.button}
 												{item.registration.button}
@@ -364,7 +364,7 @@
 
 			{#if col === 'event'}
 				{#if item.tracks}
-					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">Tracks</h2>
+					<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">Tracks</h2>
 					<div class="flex flex-wrap gap-2 mt-4">
 						{#each item.tracks as track}
 							<div
@@ -376,7 +376,7 @@
 					</div>
 				{/if}
 				{#if item.segments}
-					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">Schedule</h2>
+					<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">Schedule</h2>
 					{#each eventDates(item) as date}
 						<div class="mb-6">
 							<h3 class="mt-4 text-xl uppercase text-gray-500 dark:text-gray-400">
@@ -398,7 +398,7 @@
 					{/each}
 				{/if}
 				{#if item.speakers}
-					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
+					<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">
 						Speakers ({item.speakers?.length || 0})
 					</h2>
 					<div
@@ -413,7 +413,7 @@
 					</div>
 				{/if}
 				{#if item.events}
-					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
+					<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">
 						Sub-Events ({item.events?.length || 0})
 					</h2>
 					<div
@@ -423,7 +423,7 @@
 					</div>
 				{/if}
 				{#if item.venues}
-					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
+					<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">
 						Venues ({item.venues?.length || 0})
 					</h2>
 					<div
@@ -437,7 +437,7 @@
 					</div>
 				{/if}
 				{#if item.cfp}
-					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
+					<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">
 						<a href="{base}/for-speakers">For speakers</a>
 					</h2>
 					<div class="mt-4 text-xl">
@@ -451,7 +451,7 @@
 					</div>
 				{/if}
 				{#if item.sponsors}
-					<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
+					<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">
 						<a href="{base}/for-sponsors">For sponsors</a>
 					</h2>
 					<div class="mt-4 text-xl">
@@ -468,7 +468,7 @@
 				{/if}
 			{/if}
 			{#if col === 'union'}
-				<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
+				<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">
 					Big events ({item.events?.map((eId) => data.bundle.events.find((e) => e.id === eId))
 						.length})
 				</h2>
@@ -483,7 +483,7 @@
 				</div>
 			{/if}
 			{#if col === 'speaker'}
-				<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
+				<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">
 					Events ({data.bundle.events.filter((e) => e.speakers?.find((s) => s.id === item.id))
 						.length || 0})
 				</h2>
@@ -498,7 +498,7 @@
 				</div>
 			{/if}
 			{#if col === 'place'}
-				<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
+				<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">
 					Events ({data.bundle.events.filter((e) => e.venues?.includes(item.id)).length || 0})
 				</h2>
 				<div
@@ -512,7 +512,7 @@
 				</div>
 			{/if}
 			{#if col === 'chain'}
-				<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
+				<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">
 					Events ({data.bundle.events.filter((e) => e.chains?.includes(item.id)).length || 0})
 				</h2>
 				<div

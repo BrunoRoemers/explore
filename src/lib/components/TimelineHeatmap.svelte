@@ -3,7 +3,7 @@
 	import { goto } from '$app/navigation';
 	import ItemLogo from '$lib/components/ItemLogo.svelte';
 	import { format } from 'date-fns-tz';
-	import { config } from '$lib/bbw';
+	import { config } from '$lib/regen-village';
 	import { base } from "$app/paths"
 
 	export let data;
@@ -133,7 +133,7 @@
 <div class="w-full mb-10 relative">
 	{#if selectedSegment}
 		<div
-			class="absolute top-[81px] w-[300px] border dark:border-gray-400 bg-white dark:bg-bbw-dark dark:text-gray-200 z-50 py-2 px-4 {selectedSegment
+			class="absolute top-[81px] w-[300px] border dark:border-gray-400 bg-white dark:bg-brand-dark dark:text-gray-200 z-50 py-2 px-4 {selectedSegment
 				? 'hidden md:block'
 				: 'hidden'}"
 			style="left: {selectedSegment.event.layerX + popupWidth < timelineWidth
@@ -141,7 +141,7 @@
 				: selectedSegment.event.layerX - popupWidth}px;"
 			bind:clientWidth={popupWidth}
 		>
-			<div class="uppercase bbw-text-color-secondary text-lg">{selectedSegment.title}</div>
+			<div class="uppercase brand-text-color-secondary text-lg">{selectedSegment.title}</div>
 			{#if selectedSegmentEvents.length > 0}
 				<div class="text-xl mt-4">
 					{#each selectedSegmentEvents as [item, segmentId]}
@@ -159,7 +159,7 @@
 					{/each}
 				</div>
 			{:else}
-				<div class="text-lg mt-4 bbw-text-color-secondary">No events</div>
+				<div class="text-lg mt-4 brand-text-color-secondary">No events</div>
 			{/if}
 		</div>
 	{/if}
@@ -171,7 +171,7 @@
 			<div
 				class="mb-1 uppercase {highlightDay && highlightDay !== day
 					? 'text-gray-400 text-lg'
-					: 'text-bbw-navy text-lg'}"
+					: 'text-brand-navy text-lg'}"
 				style="width: {1 / (days.length / 100)}%;"
 			>
 				<a href="{base}/day/{format(new Date(day), 'yyyy-MM-dd', { timeZone: config.tz })}"
@@ -181,10 +181,10 @@
 			</div>
 		{/each}
 	</div>
-	<div class="w-full border {highlightDay ? 'border-gray-300' : 'border-bbw-navy'} flex">
+	<div class="w-full border {highlightDay ? 'border-gray-300' : 'border-brand-navy'} flex">
 		{#each days as day, i}
 			<div
-				class="h-10 flex flex-grow hover:bg-bbw-yellow/20"
+				class="h-10 flex flex-grow hover:bg-brand-yellow/20"
 				style="width: {1 / (days.length / 100)}%; {highlightDay && highlightDay === day
 					? 'border: 1px solid rgb(0, 36, 225);'
 					: !highlightDay
@@ -198,7 +198,7 @@
 						id="{day}-{segment}"
 						data-events={timelineData[[day, segment].join(';')].events}
 						data-score={timelineData[[day, segment].join(';')].score}
-						class="md:hover:border md:hover:border-bbw-yellow flex-grow cursor-pointer"
+						class="md:hover:border md:hover:border-brand-yellow flex-grow cursor-pointer"
 						style="width: {1 / (segments.length / 50)}%; background-color: rgba({!highlightDay ||
 						highlightDay === day
 							? '0, 36, 225'

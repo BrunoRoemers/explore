@@ -17,14 +17,14 @@
 		);
 </script>
 
-<div class="w-full h-full bg-bbw-navy">
+<div class="w-full h-full bg-brand-navy">
 	<div
 		class="flex gap-4 max-w-7xl items-center justify-end p-2 m-auto h-[50px] -mb-[30px] text-white"
 	>
 		<div class="my-auto">
 			{#if typeof window !== 'undefined'}
 				<SOffline pingUrl="https://x.gwei.cz/" on:detectedCondition={handleNetworkChange}>
-					<span slot="online" class="flex gap-2 items-center text-bbw-yellow">
+					<span slot="online" class="flex gap-2 items-center text-brand-yellow">
 						<div>
 							<svg class="w-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 								<circle cx="50" cy="50" r="50" fill="rgb(255 222 89)" />
@@ -49,20 +49,20 @@
 	{#if homepage}
 		<div class="px-6 xl:px-0">
 			<div class="max-w-7xl mx-auto pt-10 pb-6">
-				<h1 class="text-4xl font-bold text-bbw-white">
-					<a href="{base}/">Berlin Blockchain Week 2024</a>
+				<h1 class="text-4xl font-bold text-brand-white">
+					<a href="{base}/">Regen Village 2024</a>
 				</h1>
-				<div class="text-2xl text-bbw-yellow">May 18-27, 2024</div>
+				<div class="text-2xl text-brand-yellow">May 18-27, 2024</div>
 			</div>
 		</div>
-		<div class="bg-white dark:bg-bbw-dark px-6 xl:px-0 pt-6 pb-4">
-			<div class="max-w-7xl mx-auto bg-bbw-navy/10 text-bbw-navy dark:text-gray-300 rounded-lg">
+		<div class="bg-white dark:bg-brand-dark px-6 xl:px-0 pt-6 pb-4">
+			<div class="max-w-7xl mx-auto bg-brand-navy/10 text-brand-navy dark:text-gray-300 rounded-lg">
 				<div class="p-5 text-lg">
 					<p>
-						Berlin Blockchain Week is a decentralized community-organized initiative. There is no
+						Regen Village is a decentralized community-organized initiative. There is no
 						single owner. It is an agnostic movement based on the premise that self-organization is
 						the backbone of the ecosystem. We invite projects, individuals and anyone interested in
-						fruitful and educational discussions to join us in Berlin in May.<br /><br />
+						fruitful and educational discussions to join us in Brussels in July.<br /><br />
 						We are committed to reduce the noise from the market and focus on education, in order to
 						push mass adoption by providing first-hand information about the industry.<br /><br />
 						Our concept is simple: keep it educational, try to be as cost-friendly for the community

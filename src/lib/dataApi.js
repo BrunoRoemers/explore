@@ -6,7 +6,7 @@ export async function load(host = null) {
 	if (host === 'localhost') {
 		data = localData;
 	} else {
-		const resp = await fetch(`https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/index.json`);
+		const resp = await fetch(`https://regenvillage.github.io/data/24/index.json`);
 		data = await resp.json();
 	}
 	data.events.sort((a, b) => ((a.attendees || 0) < (b.attendees || 0) ? 1 : -1));
@@ -23,8 +23,6 @@ export async function load(host = null) {
 }
 
 export async function loadSchema(host) {
-	const resp = await fetch(
-		`https://duplicity6-sulfur-objet0-air1.protocol.berlin/schema/1/bundle.json`
-	);
+	const resp = await fetch(`https://regenvillage.github.io/data/schema/1/bundle.json`);
 	return resp.json();
 }

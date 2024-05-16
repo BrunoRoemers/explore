@@ -5,7 +5,7 @@
 	import CalendarList from '$lib/components/CalendarList.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import { config } from '$lib/bbw';
+	import { config } from '$lib/regen-village';
 	import { base } from "$app/paths"
 
 	import { format, compareAsc, addDays } from 'date-fns';
@@ -54,7 +54,7 @@
 </script>
 
 <svelte:head>
-	<title>Schedule | Berlin Blockchain Week 2024</title>
+	<title>Schedule | Regen Village 2024</title>
 </svelte:head>
 
 <Header path={false} type="schedule" />
@@ -66,10 +66,10 @@
 			{#each days as day}
 				<div class="mb-14">
 					<h2 class="text-3xl md:text-3xl">
-						<a href="{base}/day/{day.date}" class=" text-bbw-navy hover:underline"
+						<a href="{base}/day/{day.date}" class=" text-brand-navy hover:underline"
 							>{formatInTimeZone(new Date(day.date), config.tz, 'MMMM d, yyyy')}</a
 						>
-						<span class="bbw-text-color-primary">- {formatInTimeZone(new Date(day.date), config.tz, 'EEEE')}</span>
+						<span class="brand-text-color-primary">- {formatInTimeZone(new Date(day.date), config.tz, 'EEEE')}</span>
 					</h2>
 					<div class="mt-6">
 						<CalendarList

@@ -1,5 +1,5 @@
 <script>
-	import { config } from '$lib/bbw';
+	import { config } from '$lib/regen-village';
 	import { formatDistanceToNow } from 'date-fns';
 
 	export let item;
@@ -19,16 +19,16 @@
 						<em
 							>This page is automatically generated using a structured dataset which can be consumed
 							as a single <a
-								href="https://duplicity6-sulfur-objet0-air1.protocol.berlin/24/index.json"
+								href="https://regenvillage.github.io/data/24/index.json"
 								class="underline hover:no-underline"
 								target="_blank"
 								rel="noreferrer">JSON file</a
 							>. The source data is a GitHub repository at
 							<a
-								href="https://github.com/blockchainweek/data"
+								href="https://github.com/regenvillage/data"
 								class="underline hover:no-underline"
 								target="_blank"
-								rel="noreferrer">blockchainweek/data</a
+								rel="noreferrer">regenvillage/data</a
 							>. Go ahead and submit PRs!</em
 						>
 					</div>
@@ -46,7 +46,7 @@
 	</div>
 </div>
 
-<div class="w-full dark:text-gray-400 bg-bbw-navy pb-20">
+<div class="w-full dark:text-gray-400 bg-brand-navy pb-20">
 	<div class="max-w-7xl mx-auto mt-5 md:mt-10">
 		<div class="mx-4 xl:mx-0">
 			<div class="pt-2">
@@ -54,21 +54,21 @@
 					<div class="mt-4 text-white">
 						<div class="mt-2">
 							Last update: <a
-								href="https://github.com/blockchainweek/data/commits/main"
+								href="https://github.com/regenvillage/data/commits/main"
 								target="_blank"
 								class="underline hover:no-underline"
 								rel="noreferrer">{formatDistanceToNow(new Date(bundle.__time || null))} ago</a
 							>
 							({bundle.__tag}) &nbsp;|&nbsp;
 							<a
-								href="https://github.com/blockchainweek/explore"
+								href="https://github.com/regenvillage/explore"
 								class="underline hover:no-underline"
 								target="_blank"
-								rel="noreferrer">bbw-explore {__VERSION__}</a
+								rel="noreferrer">regen-village-explore {__VERSION__}</a
 							>
 							{#if item}
 								&nbsp;|&nbsp; ID: <a
-									href="https://github.com/blockchainweek/data/tree/main/data/24/{cc}/{item.id}"
+									href="https://github.com/regenvillage/data/tree/main/data/24/{cc}/{item.id}"
 									class="underline hover:no-underline"
 									target="_blank"
 									rel="noreferrer">{item.id}</a

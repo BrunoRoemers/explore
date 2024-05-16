@@ -30,7 +30,7 @@
 </script>
 
 <svelte:head>
-	<title>Berlin Blockchain Week 2024</title>
+	<title>Regen Village 2024</title>
 </svelte:head>
 
 <div class="w-full px-6 xl:mx-0">
@@ -39,7 +39,7 @@
 			{#each collections as cd}
 				<a href="{base}/{cd.col}">
 					<button
-						class="border rounded border-bbw-navy hover:bg-bbw-navy hover:text-white py-2 px-2 text-bbw-navy hover:shadow-lg"
+						class="border rounded border-brand-navy hover:bg-brand-navy hover:text-white py-2 px-2 text-brand-navy hover:shadow-lg"
 					>
 						{cd.value || data.bundle[cd.col]?.filter(cd.filter || ((e) => e)).length}
 						{cd.title}
@@ -50,7 +50,7 @@
 
 		<TimelineHeatmap {data} />
 
-		<h2 class="text-2xl uppercase font-bold bbw-text-color-secondary">
+		<h2 class="text-2xl uppercase font-bold brand-text-color-secondary">
 			<a href="{base}/events">Conferences and Hackathons</a> ({conferences.length})
 		</h2>
 		<Disclaimer />
@@ -59,7 +59,7 @@
 		>
 			<CollectionList arr={conferences} img="logo" col="event" offer={true} />
 		</div>
-		<h2 class="text-2xl uppercase font-bold bbw-text-color-secondary">
+		<h2 class="text-2xl uppercase font-bold brand-text-color-secondary">
 			<a href="{base}/events">Meetups, parties and other events</a> ({otherEvents.length})
 		</h2>
 		<div
@@ -68,7 +68,7 @@
 			<CollectionList arr={otherEvents} img="logo" col="event" />
 		</div>
 
-		<h2 class="text-2xl uppercase font-bold mt-10 bbw-text-color-secondary">
+		<h2 class="text-2xl uppercase font-bold mt-10 brand-text-color-secondary">
 			<a href="{base}/places">Places</a> ({data.bundle.places.length})
 		</h2>
 		<div
