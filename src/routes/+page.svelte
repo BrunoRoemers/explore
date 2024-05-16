@@ -39,7 +39,7 @@
 			{#each collections as cd}
 				<a href="{base}/{cd.col}">
 					<button
-						class="border rounded border-brand-navy hover:bg-brand-navy hover:text-white py-2 px-2 text-brand-navy hover:shadow-lg"
+						class="border rounded border-brand-green hover:bg-brand-green hover:text-white py-2 px-2 text-brand-green hover:shadow-lg"
 					>
 						{cd.value || data.bundle[cd.col]?.filter(cd.filter || ((e) => e)).length}
 						{cd.title}

@@ -66,7 +66,7 @@
 			{#each days as day}
 				<div class="mb-14">
 					<h2 class="text-3xl md:text-3xl">
-						<a href="{base}/day/{day.date}" class=" text-brand-navy hover:underline"
+						<a href="{base}/day/{day.date}" class=" text-brand-green hover:underline"
 							>{formatInTimeZone(new Date(day.date), config.tz, 'MMMM d, yyyy')}</a
 						>
 						<span class="brand-text-color-primary">- {formatInTimeZone(new Date(day.date), config.tz, 'EEEE')}</span>

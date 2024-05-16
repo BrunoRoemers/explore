@@ -65,7 +65,7 @@
 							{:else}
 								<a
 									href="{base}/{col}/{(segment.event || event).id}"
-									class="text-brand-navy hover:underline"
+									class="text-brand-green hover:underline"
 									>{(segment.event || event)[
 										(segment.event || event).shortname ? 'shortname' : 'name'
 									]}</a

@@ -15,7 +15,7 @@
 		@apply inline-block mx-3;
 	}
 	.button {
-		@apply border border-brand-yellow py-3 px-4 rounded hover:bg-brand-yellow hover:text-brand-navy;
+		@apply border border-brand-yellow py-3 px-4 rounded hover:bg-brand-yellow hover:text-brand-green;
 	}
 
 	.cc0-license {
@@ -57,7 +57,7 @@
 	}
 
 	body {
-		@apply bg-brand-navy;
+		@apply bg-brand-green;
 	}
 
 	.page-body {

@@ -171,7 +171,7 @@
 			<div
 				class="mb-1 uppercase {highlightDay && highlightDay !== day
 					? 'text-gray-400 text-lg'
-					: 'text-brand-navy text-lg'}"
+					: 'text-brand-green text-lg'}"
 				style="width: {1 / (days.length / 100)}%;"
 			>
 				<a href="{base}/day/{format(new Date(day), 'yyyy-MM-dd', { timeZone: config.tz })}"
@@ -181,7 +181,7 @@
 			</div>
 		{/each}
 	</div>
-	<div class="w-full border {highlightDay ? 'border-gray-300' : 'border-brand-navy'} flex">
+	<div class="w-full border {highlightDay ? 'border-gray-300' : 'border-brand-green'} flex">
 		{#each days as day, i}
 			<div
 				class="h-10 flex flex-grow hover:bg-brand-yellow/20"

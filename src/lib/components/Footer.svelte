@@ -46,7 +46,7 @@
 	</div>
 </div>
 
-<div class="w-full dark:text-gray-400 bg-brand-navy pb-20">
+<div class="w-full dark:text-gray-400 bg-brand-green pb-20">
 	<div class="max-w-7xl mx-auto mt-5 md:mt-10">
 		<div class="mx-4 xl:mx-0">
 			<div class="pt-2">

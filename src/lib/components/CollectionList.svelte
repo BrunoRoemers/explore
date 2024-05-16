@@ -44,7 +44,7 @@
 		<div class="w-full relative">
 			{#if col === 'benefit'}
 				<div class="absolute top-3 -left-2.5 z-50">
-					<div class="bg-brand-navy py-0.5 px-1.5 rounded-md text-white uppercase text-base">
+					<div class="bg-brand-green py-0.5 px-1.5 rounded-md text-white uppercase text-base">
 						{item.slogan}
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 				{#if item.hidden}
 					{item.shortname || item.name}*
 				{:else}
-					<h3 class=" text-brand-navy">
+					<h3 class=" text-brand-green">
 						<a href={_url(col, item)} class="hover:underline">{item.shortname || item.name}</a>
 					</h3>
 				{/if}

@@ -186,7 +186,7 @@
 												{:else}
 													<a
 														href="{base}/{tc.model}/{item.id}"
-														class="text-brand-navy hover:underline">{item.name}</a
+														class="text-brand-green hover:underline">{item.name}</a
 													>
 												{/if}
 											</div>
@@ -235,7 +235,7 @@
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{base}/{tc.model}/{item.id}" class="text-brand-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-brand-green hover:underline"
 												>{item.name}</a
 											>
 										</td>
@@ -263,7 +263,7 @@
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{base}/{tc.model}/{item.id}" class="text-brand-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-brand-green hover:underline"
 												>{item.name}</a
 											>
 										</td>
@@ -287,7 +287,7 @@
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{base}/{tc.model}/{item.id}" class="text-brand-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-brand-green hover:underline"
 												>{item.name}</a
 											>
 										</td>
@@ -300,7 +300,7 @@
 											</a>
 										</td>
 										<td class="text-2xl h-12">
-											<a href="{base}/{tc.model}/{item.id}" class="text-brand-navy hover:underline"
+											<a href="{base}/{tc.model}/{item.id}" class="text-brand-green hover:underline"
 												>{item.name}</a
 											>
 										</td>

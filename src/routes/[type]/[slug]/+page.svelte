@@ -306,7 +306,7 @@
 								<div class="pb-2">
 									<a href={item.registration.link} class="" target="_blank" rel="noreferrer">
 										<div
-											class="inline-block py-3 px-6 border border-brand-navy hover:bg-brand-navy hover:text-white text-brand-navy text-xl rounded-lg whitespace-nowrap"
+											class="inline-block py-3 px-6 border border-brand-green hover:bg-brand-green hover:text-white text-brand-green text-xl rounded-lg whitespace-nowrap"
 										>
 											{#if item.registration.button}
 												{item.registration.button}

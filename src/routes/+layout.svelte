@@ -17,7 +17,7 @@
 		);
 </script>
 
-<div class="w-full h-full bg-brand-navy">
+<div class="w-full h-full bg-brand-green">
 	<div
 		class="flex gap-4 max-w-7xl items-center justify-end p-2 m-auto h-[50px] -mb-[30px] text-white"
 	>
@@ -56,7 +56,7 @@
 			</div>
 		</div>
 		<div class="bg-white dark:bg-brand-dark px-6 xl:px-0 pt-6 pb-4">
-			<div class="max-w-7xl mx-auto bg-brand-navy/10 text-brand-navy dark:text-gray-300 rounded-lg">
+			<div class="max-w-7xl mx-auto bg-brand-green/10 text-brand-green dark:text-gray-300 rounded-lg">
 				<div class="p-5 text-lg">
 					<p>
 						Regen Village is a decentralized community-organized initiative. There is no
