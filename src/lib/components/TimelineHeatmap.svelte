@@ -199,10 +199,11 @@
 						data-events={timelineData[[day, segment].join(';')].events}
 						data-score={timelineData[[day, segment].join(';')].score}
 						class="md:hover:border md:hover:border-brand-yellow flex-grow cursor-pointer"
-						style="width: {1 / (segments.length / 50)}%; background-color: rgba({!highlightDay ||
-						highlightDay === day
-							? '0, 129, 103'
-							: '115, 115, 115'}, {timelineData[[day, segment].join(';')].perc}%);"
+						style="
+							width: {1 / (segments.length / 50)}%;
+							opacity: {timelineData[[day, segment].join(';')].perc/100};
+							background-color: {!highlightDay || highlightDay === day ? 'var(--brand-green)' : '115, 115, 115'};
+						"
 						on:click={makeClick(day, segment, timelineData[[day, segment].join(';')])}
 						on:mouseenter={makeSelected(day, segment, timelineData[[day, segment].join(';')])}
 						on:mouseleave={hiddenSelected}
