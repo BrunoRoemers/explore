@@ -11,7 +11,7 @@ module.exports = {
 			},
 			colors: {
 				brand: {
-					green: '#008167',
+					green: 'var(--brand-green)',
 					yellow: '#ffd200',
 					white: '#ffffff',
 					dark: '#121212'

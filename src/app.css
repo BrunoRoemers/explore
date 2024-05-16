@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--brand-green: #008167;
+}
+
 @layer components {
 	.link {
 		@apply underline hover:no-underline hover:text-red-200;
