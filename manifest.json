@@ -1,7 +1,7 @@
 {
 	"name": "Regen Village 2024",
-	"theme_color": "#0024ff",
-	"background_color": "#0024ff",
+	"theme_color": "#008167",
+	"background_color": "#008167",
 	"display": "browser",
 	"scope": "/",
 	"start_url": "/"
