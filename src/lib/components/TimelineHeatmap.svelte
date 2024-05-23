@@ -9,8 +9,8 @@
 	export let data;
 	export let highlightDay = false;
 
-	const startDate = '2024-05-18';
-	const endDate = '2024-05-27';
+	const startDate = config.date;
+	const endDate = addDays(config.date, config.days - 1);
 	const segmentMinutes = 60;
 	const bundle = data.bundle;
 

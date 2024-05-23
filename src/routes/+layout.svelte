@@ -52,7 +52,7 @@
 				<h1 class="text-4xl font-bold text-brand-white">
 					<a href="{base}/">Regen Village 2024</a>
 				</h1>
-				<div class="text-2xl text-brand-yellow">May 18-27, 2024</div>
+				<div class="text-2xl text-brand-yellow">July 8-12, 2024</div>
 			</div>
 		</div>
 		<div class="bg-white dark:bg-brand-dark px-6 xl:px-0 pt-6 pb-4">

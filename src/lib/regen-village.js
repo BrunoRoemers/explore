@@ -46,6 +46,6 @@ export const config = {
 		expo: '#eee0da',
 		party: '#dbeddb'
 	},
-	date: '2024-05-18',
-	days: 10
+	date: '2024-07-08',
+	days: 5
 };
