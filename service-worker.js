@@ -1,40 +1,40 @@
 const c = [
   "/explore/_app/immutable/assets/_layout-faf2005a.css",
-  "/explore/_app/immutable/chunks/CollectionList-8eff242c.js",
   "/explore/_app/immutable/chunks/Disclaimer-15eeef6d.js",
-  "/explore/_app/immutable/chunks/TimelineHeatmap-8d56020b.js",
-  "/explore/_app/immutable/chunks/singletons-c9b53750.js",
-  "/explore/_app/immutable/components/error.svelte-bf878a46.js",
-  "/explore/_app/immutable/chunks/_layout-3bca59e4.js",
-  "/explore/_app/immutable/components/pages/_page.svelte-5bbbfaa2.js",
-  "/explore/_app/immutable/chunks/5-6bff8e80.js",
-  "/explore/_app/immutable/chunks/stores-6b80303c.js",
   "/explore/_app/immutable/chunks/1-507f4667.js",
-  "/explore/_app/immutable/chunks/3-7149fc9a.js",
-  "/explore/_app/immutable/chunks/4-431d028c.js",
-  "/explore/_app/immutable/components/pages/schedule/_page.svelte-f147e7f9.js",
-  "/explore/_app/immutable/chunks/EventTypeBadge-9466e62a.js",
-  "/explore/_app/immutable/chunks/2-8b5cd56e.js",
-  "/explore/_app/immutable/modules/pages/_layout.js-7f49a76d.js",
-  "/explore/_app/immutable/chunks/Footer-a3e4efb3.js",
-  "/explore/_app/immutable/chunks/0-9e0b059e.js",
-  "/explore/_app/immutable/chunks/6-ee6d2496.js",
-  "/explore/_app/immutable/components/pages/_type_/_page.svelte-a30e5bba.js",
-  "/explore/_app/immutable/start-226be766.js",
-  "/explore/_app/immutable/components/pages/day/_date_/_page.svelte-358eda0d.js",
-  "/explore/_app/immutable/components/pages/_type_/_slug_/_page.svelte-49f5b34f.js",
-  "/explore/_app/immutable/chunks/CalendarList-5a7545ee.js",
-  "/explore/_app/immutable/components/pages/_layout.svelte-a85fda49.js",
-  "/explore/_app/immutable/chunks/utils-157bfc7e.js"
+  "/explore/_app/immutable/chunks/2-efce8324.js",
+  "/explore/_app/immutable/chunks/3-7feebf71.js",
+  "/explore/_app/immutable/chunks/4-81bfec84.js",
+  "/explore/_app/immutable/chunks/5-aa012472.js",
+  "/explore/_app/immutable/chunks/6-309e1919.js",
+  "/explore/_app/immutable/modules/pages/_layout.js-4640e4dd.js",
+  "/explore/_app/immutable/chunks/_layout-9e6679e0.js",
+  "/explore/_app/immutable/components/error.svelte-bf878a46.js",
+  "/explore/_app/immutable/chunks/singletons-c9b53750.js",
+  "/explore/_app/immutable/components/pages/_page.svelte-00d481f2.js",
+  "/explore/_app/immutable/chunks/0-c0027595.js",
+  "/explore/_app/immutable/components/pages/_layout.svelte-e7aa9dfd.js",
+  "/explore/_app/immutable/chunks/CollectionList-ab3247da.js",
+  "/explore/_app/immutable/components/pages/day/_date_/_page.svelte-de94fbc8.js",
+  "/explore/_app/immutable/chunks/TimelineHeatmap-db84fa82.js",
+  "/explore/_app/immutable/components/pages/_type_/_page.svelte-3a3bed67.js",
+  "/explore/_app/immutable/chunks/EventTypeBadge-6c3eca7a.js",
+  "/explore/_app/immutable/chunks/stores-6b80303c.js",
+  "/explore/_app/immutable/chunks/Footer-1dbbfb42.js",
+  "/explore/_app/immutable/chunks/CalendarList-25103ea5.js",
+  "/explore/_app/immutable/components/pages/schedule/_page.svelte-54aa9304.js",
+  "/explore/_app/immutable/start-b171f7fd.js",
+  "/explore/_app/immutable/components/pages/_type_/_slug_/_page.svelte-80bc3f98.js",
+  "/explore/_app/immutable/chunks/utils-849638e1.js"
 ], m = [
   "/explore/favicon.png",
   "/explore/img/.keep",
   "/explore/manifest.json",
   "/explore/preview.jpg"
-], u = "1716500927533", d = "24", h = "Regen Village 2024", b = "https://regenvillage.github.io/data/24", g = "https://regenvillage.github.io/explore", f = "https://github.com/regenvillage/data/tree/main/data/24", _ = [
+], u = "1716501502926", d = "24", h = "Regen Village 2024", b = "https://regenvillage.github.io/data/24", g = "https://regenvillage.github.io/explore", f = "https://github.com/regenvillage/data/tree/main/data/24", _ = [
   {
-    id: "index",
-    hash: "022b516283e13408676d60ec393eb34b77e5cf680c1f4fb0d4533b80bd0b35fb",
+    id: "commons-hub",
+    hash: "942bbd0ee46224c791887f4d3398b511c1ea76253e1fa5976786d308b9740f71",
     name: "Commons Hub",
     eventTypes: [
       "gathering"
@@ -44,7 +44,7 @@ const c = [
     mapUrl: "https://maps.app.goo.gl/x1K2C7pVCW6yVwde7",
     description: `The Commons Hub Brussels is a shared place to meet, co-create, work and organise events. The space is  managed as a common itself, with shared responsibilities and ownership. All members are crew in making this place thrive.
 `,
-    photo: "https://regenvillage.github.io/data/24/assets/places/index/logo.webp",
+    photo: "https://regenvillage.github.io/data/24/assets/places/commons-hub/logo.webp",
     links: {
       web: "https://commonshub.brussels/"
     }
@@ -65,9 +65,9 @@ const c = [
     date: "2024-07-08",
     days: 5,
     times: "09:00-20:00",
-    venueName: "Commons Hub",
-    venueUrl: "https://maps.app.goo.gl/x1K2C7pVCW6yVwde7",
-    venueAddress: "Rue de la Madeleine 51, 1000 Brussels, Belgium",
+    venues: [
+      "commons-hub"
+    ],
     languages: [
       "english"
     ],
@@ -123,7 +123,7 @@ const c = [
       }
     ]
   }
-], x = [], k = [], T = [], j = [], w = "2024-05-23T21:37:32.118Z", y = "v24.2.6", p = {
+], k = [], x = [], T = [], j = [], w = "2024-05-23T21:55:49.199Z", y = "v24.2.8", p = {
   id: d,
   name: h,
   dataUrl: b,
@@ -132,14 +132,14 @@ const c = [
   places: _,
   events: v,
   "media-partners": [],
-  contributors: x,
-  benefits: k,
+  contributors: k,
+  benefits: x,
   unions: T,
   chains: j,
   "other-events": [],
   __time: w,
   __tag: y
-}, o = {
+}, l = {
   tz: "Europe/Brussels",
   collections: {
     places: {
@@ -187,19 +187,19 @@ const c = [
     expo: "#eee0da",
     party: "#dbeddb"
   },
-  date: "2024-05-18",
-  days: 10
-}, i = `cache-${u}`, l = [];
-for (const e in o.collections)
-  o.collections[e].virtual || l.push(...p[e].map((t) => t.logo || t.photoUrl || t.photo).filter((t) => t));
+  date: "2024-07-08",
+  days: 5
+}, i = `cache-${u}`, o = [];
+for (const e in l.collections)
+  l.collections[e].virtual || o.push(...p[e].map((t) => t.logo || t.photoUrl || t.photo).filter((t) => t));
 for (const e of p.events)
-  e.speakers && l.push(...e.speakers.map((t) => t.photoUrl).filter((t) => t));
+  e.speakers && o.push(...e.speakers.map((t) => t.photoUrl).filter((t) => t));
 const r = [
   ...c,
   // the app itself
   ...m,
   // everything in `static`
-  ...l
+  ...o
 ];
 self.addEventListener("install", (e) => {
   async function t() {
